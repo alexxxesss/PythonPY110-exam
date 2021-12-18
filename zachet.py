@@ -32,13 +32,13 @@ def books(count: int = 1) -> Iterator[dict]:
 
 def fields() -> dict:
     fields_dict = {
-    "title": name_books(),
-    "year": release_date(),
-    "pages": pages_gen(),
-    "isbn13": isbn13_gen(),
-    "rating":rating_gen(),
-    "price": price_gen(),
-    "author": author_gen()
+        "title": name_books(),
+        "year": release_date(),
+        "pages": pages_gen(),
+        "isbn13": isbn13_gen(),
+        "rating": rating_gen(),
+        "price": price_gen(),
+        "author": author_gen()
     }
     return fields_dict
 
@@ -62,11 +62,11 @@ def isbn13_gen() -> str:
 
 
 def rating_gen(min_rate: int = 0, max_rate: int = 5) -> float:
-    return round(random.uniform(min_rate, max_rate),2)
+    return round(random.uniform(min_rate, max_rate), 2)
 
 
 def price_gen(min_price: int = 0, max_price: int = 2000) -> float:
-    return round(random.uniform(min_price, max_price),2)
+    return round(random.uniform(min_price, max_price), 2)
 
 
 def author_gen() -> list:
